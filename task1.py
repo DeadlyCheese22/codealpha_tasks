@@ -17,9 +17,9 @@ def packet_callback(packet): # Called for each packet captured by sniffer
 print("Starting network sniffer... \n")
 try:
     # Put in "iface=" the name of my network interface: Ethernet or Wi-Fi !!!
-    sniff(prn=packet_callback, iface='Ethernet', store=0, count=500)
+    sniff(prn=packet_callback, iface='Ethernet', store=0, count=100)
    # Initiates the packet sniffing process. It uses the sniff function from Scapy, specifying packet_callback as the callback function to handle captured packets. The iface parameter specifies the network interface to sniff on, in this case, it's set to 'Ethernet'. 
-   # The store parameter is set to 0, which means it doesn't store packets in memory, and the count parameter is the number of packets to sniff.
+   # The store parameter is set to 0, which means it doesn't store packets in memory. The count parameter is the number of packets to sniff.
    
 except KeyboardInterrupt: # Catches the KeyboardInterrupt exception, which is raised when the user interrupts the script (e.g., by pressing Ctrl+C)
     print("\nStopping network sniffer...") #Prints a message indicating that the network sniffer is stopping
